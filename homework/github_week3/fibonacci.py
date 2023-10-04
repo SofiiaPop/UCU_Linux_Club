@@ -19,7 +19,10 @@ def fibonacci_list(n: int) -> typing.List[int]:
 
 def fibonacci_single(n: int) -> int:
     """Returns the nth Fibonacci number"""
-    pass
+    fib1 = (5 ** 0.5 + 1) / 2
+    fib2 = (5 ** 0.5 - 1) / 2
+    fib = (fib1 ** n - (-fib2) ** n) / 5 ** 0.5
+    return fib
 
 
 def golden_section_num() -> float:
@@ -44,7 +47,8 @@ def sqrt(num: int) -> float:
 
 def main():
     """Main function"""
-    pass
+    n = get_input()
+    print(fibonacci_list(n))
 
 
 if __name__ == "__main__":
